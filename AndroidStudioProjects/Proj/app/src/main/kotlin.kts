@@ -22,6 +22,7 @@ fun averageInc():Double {
     return ave
 }
 
+
 val sevenDays = SevenDays(1,2,3,4,5)
 
 

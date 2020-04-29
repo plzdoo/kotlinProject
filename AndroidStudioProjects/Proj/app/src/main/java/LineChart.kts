@@ -1,3 +1,4 @@
+//
 import android.graphics.Color.red
 import com.example.proj.R
 import com.github.mikephil.charting.data.Entry
@@ -16,6 +17,7 @@ data class SevenDays(val first: Int, val second: Int, val third: Int, val fourth
     val fifPre = fourPre * averageInc() + fourPre
 }
 
+
 fun averageInc():Double {
 
     val aveFir = (sevenDays.second - sevenDays.first)/sevenDays.first
@@ -29,6 +31,7 @@ fun averageInc():Double {
     return ave
 }
 
+
 val sevenDays = SevenDays(1,2,3,4,5)
 
 val entries = ArrayList<Entry>()
@@ -41,13 +44,21 @@ entries.add(Entry(10f, sevenDays.fifPre.toFloat()))
 
 val vl = LineDataSet(entries,"My Types")
 
+val v = arrayOf(sevenDays.firPre.toString(),
+                sevenDays.secPre.toString(),
+                sevenDays.thiPre.toString(),
+                sevenDays.fourPre.toString(),
+                sevenDays.fifPre.toString())
+
+
 vl.setDrawValues(false)
 vl.setDrawFilled(true)
 vl.lineWidth = 3f
 
-val lineChart by bind<LineChart>(R.id.lineChart)
 
+//val lineChart by bind<LineChart>(R.id.lineChart)
 
+val lineChart = LineChart(v)
 
 //Part5
 lineChart.xAxis.labelRotationAngle = 0f
