@@ -1,2 +1,1 @@
 # kotlinProject
-this project is made to predict the future. For example, if I trying to predict the data of score of exam, I will input a set of data contain the score of first five day. Then it will predict the score of the future five day depend on the average increasing rate. It should be able to draw a line chart but I am not able to draw a line chart. I try different library for thousand times but it just doesn't works. 
